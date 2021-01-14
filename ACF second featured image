@@ -1,0 +1,9 @@
+//Change Yoast SEO custome featured image
+// define the wpseo_opengraph_image callback 
+function filter_wpseo_opengraph_image( $img ) { 
+  $second = get_field('second_image');
+    return $second; 
+}; 
+         
+// add the filter 
+add_filter( 'wpseo_opengraph_image', 'filter_wpseo_opengraph_image', 10, 1 );
